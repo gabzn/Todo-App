@@ -117,7 +117,7 @@ const Todo = () =>
                         <div className="inputField">
                             <input type="text" placeholder="Todo" value={todoInput} onChange={e => setTodoInpute(e.target.value)}/>
                             <input type="text" placeholder="Description" value={descriptionInput} onChange={e => setDescriptionInput(e.target.value)}/>
-                            <input type="datetime-local" placeholder="Time" value={timeInput} onChange={e => setTimeInput(e.target.value)}/>
+                            <input type="datetime-local" placeholder="Time" value={timeInput} onChange={e => setTimeInput(e.target.value)} id='timeInput'/>
                             { isSubmittable && <button > Submit </button>}
                         </div>
                     </div>
