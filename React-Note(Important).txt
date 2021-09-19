@@ -1,0 +1,11 @@
+To create a react project:
+	npx create-react-app NAME
+
+To start a react project:
+	npm run start
+
+To download all the dependencies:
+	npm install
+
+To download the router:
+	npm install react-router-dom
