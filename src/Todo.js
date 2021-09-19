@@ -93,9 +93,9 @@ const Todo = () =>
             
             <h2>All Your Todo's</h2>
             <div className="todoHead">
-                <h4>Todo</h4>
-                <h4>Description</h4>
-                <h4>Time</h4>
+                <div>Todo</div>
+                <div>Description</div>
+                <div>Time</div>
             </div>
 
             <form onSubmit={handleSubmit}>
@@ -106,9 +106,9 @@ const Todo = () =>
                         (
                             <div className="todoInfo" key={index}>
 
-                                <p>{thing.todo}</p>
-                                <p>{thing.description}</p>
-                                <p>{thing.time}</p>
+                                <div>{thing.todo}</div>
+                                <div>{thing.description}</div>
+                                <div>{thing.time}</div>
                                 <button onClick={e => handleClick(e)} name={thing.id}>Delete</button>
                             
                             </div>
@@ -123,7 +123,7 @@ const Todo = () =>
                     </div>
                 </fieldset>
             </form>
-            
+
         </div>
      );
 }
