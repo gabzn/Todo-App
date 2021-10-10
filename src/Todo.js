@@ -13,7 +13,6 @@ const Todo = () =>
     {
         const abortController = new AbortController();
 
-        // Use useEffect to fetch the data from database as soon as the website is loaded.
         async function fetchCalendar() 
         {
             try
@@ -31,7 +30,7 @@ const Todo = () =>
 
         fetchCalendar();
         return () => abortController.abort();
-    }, [calendar]);
+    }, [calendar.length]);
 
     // Three input fields in the form.
     const [todoInput, setTodoInpute] = useState('');
@@ -48,6 +47,7 @@ const Todo = () =>
     useEffect( () =>
     {     
         if(todoInput && descriptionInput && timeInput) setIsSubmittable(true);
+        else setIsSubmittable(false);
     }, [todoInput, descriptionInput, timeInput])
 
     // Update and display the new todo list every time the form is submitted.
@@ -66,7 +66,6 @@ const Todo = () =>
 
         const newCalendar = [...calendar, newTodo];
         setCalendar(newCalendar);
-
         resetInputFields();
     }
 
